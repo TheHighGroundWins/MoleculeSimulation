@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class ElectronManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    //the total electronegativity charge
+    //of all molecules pulling on it
+    public int power = 0;
+    
+    //state of wether it is bonded or not
+    public bool bonded = false;
 }

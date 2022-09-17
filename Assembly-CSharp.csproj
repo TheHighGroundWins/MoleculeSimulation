@@ -41,8 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/NucleusController.cs" />
+     <Compile Include="Assets/Scripts/MouseController.cs" />
      <Compile Include="Assets/Scripts/ElectronManager.cs" />
+     <Compile Include="Assets/Scripts/InnerCollider.cs" />
+     <Compile Include="Assets/Scripts/NucleusController.cs" />
+     <Compile Include="Assets/Scripts/ElectronInfo.cs" />
      <Reference Include="UnityEngine">
      <HintPath>/home/jc/Unity/Hub/Editor/2021.3.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
