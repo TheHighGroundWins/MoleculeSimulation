@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9151956711564554462}
   - component: {fileID: 9151956711564554460}
   - component: {fileID: 9151956711564554531}
+  - component: {fileID: 43394305}
   m_Layer: 0
   m_Name: Molecule
   m_TagString: Nucleus
@@ -99,6 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf9f8a6a47f8e2fb949b1b594247d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energy: 5
+  electronPush: 10
 --- !u!58 &9151956711564554531
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -109,12 +112,33 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5.1226454
+--- !u!50 &43394305
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9151956711564554463}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &9151956711658847055
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,9 +181,9 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.56399

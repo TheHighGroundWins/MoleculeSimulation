@@ -43,6 +43,15 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/MouseController.cs" />
      <Compile Include="Assets/Scripts/MoleculeController.cs" />
+     <Compile Include="Assets/Scripts/Temperature.cs" />
+     <Folder Include="Assets" />
+     <Folder Include="Assets/Scenes" />
+     <Folder Include="Assets/Settings" />
+     <Folder Include="Assets/Sprites/GimpFiles" />
+     <Folder Include="Assets/Settings/Scenes" />
+     <Folder Include="Assets/Sprites" />
+     <Folder Include="Assets/Scripts" />
+     <Folder Include="Assets/Prefabs" />
      <Reference Include="UnityEngine">
      <HintPath>/home/jc/Unity/Hub/Editor/2021.3.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
