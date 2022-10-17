@@ -44,6 +44,11 @@ public class MoleculeController : MonoBehaviour
         return energy;
     }
 
+    public void SetEnergy(float energy)
+    {
+        this.energy=energy;
+    }
+
     /*
      * for both of these
      * theres 3 different attractions
@@ -92,14 +97,14 @@ public class MoleculeController : MonoBehaviour
 
             //coulombic
             moleculeCollider.GetComponent<Rigidbody2D>().AddForce
-                (Temperature.temp*direction*((energy*
+                (SimulationPresets.temp*direction*((energy*
               nucleusCollider.GetComponent<MoleculeController>().GetEnergy()) /distance));
           
           
             
             //van der waals
             moleculeCollider.GetComponent<Rigidbody2D>().AddForce
-                (Temperature.temp*direction*(-1/(distance/2)));
+                (SimulationPresets.temp*direction*(-1/(distance/2)));
 
         }
         
@@ -108,7 +113,7 @@ public class MoleculeController : MonoBehaviour
         if (moleculeCollider.tag == "Electron" && moleculeCollider.IsTouching(electronCollider))
         {
             //repulsive/push force
-            moleculeCollider.GetComponentInParent<Rigidbody2D>().AddForce(Temperature.temp*direction*-electronPush); 
+            moleculeCollider.GetComponentInParent<Rigidbody2D>().AddForce(SimulationPresets.temp*direction*-electronPush); 
         }
     }
 }
