@@ -11,8 +11,8 @@ public class MoleculeController : MonoBehaviour
     private CircleCollider2D electronCollider;
 
     [SerializeField]
-    private float energy = 5f;
-    
+    private float energy = SimulationPresets.defaultEnergy;
+
     [SerializeField]
     private float electronPush = 10f;
 
@@ -22,6 +22,10 @@ public class MoleculeController : MonoBehaviour
         //counter for seperating colliders
         int i = 0;
         CircleCollider2D[] colliders = GetComponentsInChildren<CircleCollider2D>();
+        
+        //set default energy
+        energy = SimulationPresets.defaultEnergy;
+
         for (i = 0; i < colliders.Length; i++)
         {
             //seperate the two colliders in order to differentiate collision
@@ -87,7 +91,7 @@ public class MoleculeController : MonoBehaviour
 
         //variable to hold distance between two point
         float distance = 0;
-        
+
         //coulombic and van der waals reaction
         if (moleculeCollider.IsTouching(nucleusCollider) && 
             !moleculeCollider.IsTouching(electronCollider) && moleculeCollider.tag=="Nucleus")
@@ -97,14 +101,14 @@ public class MoleculeController : MonoBehaviour
 
             //coulombic
             moleculeCollider.GetComponent<Rigidbody2D>().AddForce
-                (SimulationPresets.temp*direction*((energy*
+                (SimulationPresets.speed*direction*((energy*
               nucleusCollider.GetComponent<MoleculeController>().GetEnergy()) /distance));
           
           
             
             //van der waals
             moleculeCollider.GetComponent<Rigidbody2D>().AddForce
-                (SimulationPresets.temp*direction*(-1/(distance/2)));
+                (SimulationPresets.speed*direction*(-1/(distance/2)));
 
         }
         
@@ -113,7 +117,7 @@ public class MoleculeController : MonoBehaviour
         if (moleculeCollider.tag == "Electron" && moleculeCollider.IsTouching(electronCollider))
         {
             //repulsive/push force
-            moleculeCollider.GetComponentInParent<Rigidbody2D>().AddForce(SimulationPresets.temp*direction*-electronPush); 
+            moleculeCollider.GetComponentInParent<Rigidbody2D>().AddForce(SimulationPresets.speed*direction*-electronPush); 
         }
     }
 }

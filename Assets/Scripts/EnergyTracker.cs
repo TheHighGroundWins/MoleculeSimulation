@@ -12,7 +12,7 @@ public class EnergyTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        energyField = GetComponentInChildren<TMP_InputField>();
+        energyField = GetComponent<TMP_InputField>();
     }
 
     public void InitEnergy(float startEnergy)
